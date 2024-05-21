@@ -6,7 +6,8 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        plugin = { "pretty","html:target/cucumber-report.html" },
+        plugin = { "pretty","json:target/surefire-reports/cucumber.json" ,
+        "html:target/cucumber-html-report.html"},
         glue = {"hellocucumber"},
         features = {"src/test/resources/hellocucumber/"}
 )
